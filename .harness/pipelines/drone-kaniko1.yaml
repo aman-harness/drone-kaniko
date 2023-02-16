@@ -10,6 +10,7 @@ stages:
               api_token: slacktoken
               text: hello
               color: "#ffffff"
+              channel: "#general"
             uses: slack@3.5.0
           type: bitrise
         - name: go_build
