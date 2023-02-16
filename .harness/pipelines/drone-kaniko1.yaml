@@ -3,16 +3,13 @@ stages:
   - name: build
     spec:
       steps:
-        - name: Send a Slack message
+        - name: Slack
           spec:
             with:
-              webhook_url: slackurl
-              api_token: slacktoken
-              text: hello
-              color: "#ffffff"
-              channel: "#general"
-            uses: slack@3.5.0
-          type: bitrise
+              webhook: https://hooks.slack.com/services/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
+              template: test
+            uses: ""
+          type: plugin
         - name: go_build
           spec:
             run: go build
