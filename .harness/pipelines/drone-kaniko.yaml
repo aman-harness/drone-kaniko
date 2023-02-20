@@ -2,6 +2,8 @@ name: Sample Pipeline_1676565664416
 stages:
   - name: build
     spec:
+      strategy:
+        parallelism: 10
       steps:
         - name: go_build
           spec:
